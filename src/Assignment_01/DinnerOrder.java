@@ -7,47 +7,39 @@ public class DinnerOrder {
         Scanner s = new Scanner(System.in);
         int numberOfPeople;
 
-        String response2 = "You are alone for dinner.";
-        String response3 = "Please enter a proper value.";
-
         System.out.println("How many people are having dinner. \n(Enter a value between 1 and 100)");
         if (s.hasNextInt())
         {
             numberOfPeople = s.nextInt();
-            String response1 = "You have " + numberOfPeople + " people at the dinner table.";
 
             if (numberOfPeople > 1)
-                System.out.println(response1);
+                System.out.println("You have " + numberOfPeople + " people at the dinner table.");
 
             if (numberOfPeople == 1)
-                System.out.println(response2);
+                System.out.println("You are alone for dinner.");
 
         } else
             numberOfPeople = -1;
         s.nextLine();
 
-        while (numberOfPeople < 1 || numberOfPeople > 100)
+        while (numberOfPeople < 1)
         {
-            System.out.println(response3);
+            System.out.println("Please enter a proper value.");
             if (s.hasNextInt())
             {
                 numberOfPeople = s.nextInt();
+
+                if (numberOfPeople > 1)
+                    System.out.println("You have " + numberOfPeople + " people at the dinner table.");
+
+                if (numberOfPeople == 1)
+                    System.out.println("You are alone for dinner.");
             } else
             {
                 numberOfPeople = -1;
             }
             s.nextLine();
         }
-
-
-
-
-
-
-
-
-
-
 
     }
 }
