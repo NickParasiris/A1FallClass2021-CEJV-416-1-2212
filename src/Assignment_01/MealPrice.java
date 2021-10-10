@@ -14,11 +14,25 @@ public class MealPrice {
         if (s.hasNextInt())
         {
             mealPrice = s.nextInt();
-            String responsePrice1;
-            System.out.println();
+            System.out.println("The price of the meal is " + m.format(mealPrice));
+        } else
+            mealPrice = -1;
+
+        s.nextLine();
+
+        while (mealPrice < 1)
+        {
+            System.out.println("Please enter a proper value");
+
+            if (s.hasNextInt())
+            {
+                mealPrice = s.nextInt();
+                System.out.println("The price of the meal is " + m.format(mealPrice));
+            } else
+                mealPrice = -1;
+
+            s.nextLine();
         }
-
-
 
     }
 }

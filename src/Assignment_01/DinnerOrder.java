@@ -7,7 +7,7 @@ public class DinnerOrder {
         Scanner s = new Scanner(System.in);
         int numberOfPeople;
 
-        System.out.println("How many people are having dinner. \n(Enter a value between 1 and 100)");
+        System.out.println("How many people are having dinner.");
         if (s.hasNextInt())
         {
             numberOfPeople = s.nextInt();
@@ -20,6 +20,7 @@ public class DinnerOrder {
 
         } else
             numberOfPeople = -1;
+
         s.nextLine();
 
         while (numberOfPeople < 1)

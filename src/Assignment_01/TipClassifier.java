@@ -2,7 +2,6 @@ package Assignment_01;
 
 import java.text.NumberFormat;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class TipClassifier {
@@ -11,14 +10,14 @@ public class TipClassifier {
         NumberFormat p = NumberFormat.getPercentInstance();
         Scanner s = new Scanner(System.in);
         String tipRating;
-        double tipPercent = 0.0;
+        double tipPercent = 0;
         String unknownValue = null;
 
         double great = .2;
         double good = .15;
         double basic = .1;
         double bad = 0.0;
-        String begin = "What is you rating for the tip\n" +
+        String begin = "What is your rating for the tip\n" +
                 "(Great or Excellent 20%, Good 15%, Basic 10%, Bad 0%):";
         String not = "Not the correct value";
 
@@ -42,18 +41,17 @@ public class TipClassifier {
                     tipRating.equals("Basic") ||
                     tipRating.equals("Bad");
 
-            String formattedTip = p.format(tipPercent);
             if (equals1)
             {
-                System.out.println("You tipped " + formattedTip);
+                break;
             }
             else
+            {
                 System.out.println(unknownValue);
-
-            if (equals1)
-                break;
+            }
 
         }
+        System.out.println(tipPercent);
 
 
     }
