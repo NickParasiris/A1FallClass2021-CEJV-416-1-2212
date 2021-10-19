@@ -1,4 +1,4 @@
-package Assignment_01;
+package Assignments.Assignment_01.Question_01;
 
 import java.text.NumberFormat;
 import java.util.Scanner;

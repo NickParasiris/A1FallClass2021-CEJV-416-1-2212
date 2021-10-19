@@ -1,9 +1,9 @@
-package Assignment_01;
+package Assignments.Assignment_01.Question_01;
 
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-public class Question_01 {
+public class Question_01_Answer {
     public static void main(String[] args) {
 
         NumberFormat m = NumberFormat.getCurrencyInstance();
