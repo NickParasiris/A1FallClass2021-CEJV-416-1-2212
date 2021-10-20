@@ -12,7 +12,6 @@ public class Question_02_Answer {
         System.out.println("Please enter the size of the table. \n" + "(Must be an integer.)");
         if (s.hasNextInt())
         {
-
             tableSize = s.nextInt();
             System.out.println("The size of the table is " + tableSize);
         } else
@@ -62,8 +61,6 @@ public class Question_02_Answer {
 
             System.out.println();
         }
-
-
 
     }
 }
