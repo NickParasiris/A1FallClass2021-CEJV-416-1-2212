@@ -15,18 +15,20 @@ public class Question_03_Answer {
 
         while (true)
         {
-            System.out.println("Main Menu\n" +
-                    "A) Draw a triangle\n" +
-                    "B) Draw a rectangle\n" +
-                    "Q) Quit program");
+            System.out.println("""
+                    Main Menu
+                    1) Draw a triangle
+                    2) Draw a rectangle
+                    Q) Quit program""");
             response = s.nextLine();
 
-            if (response.equalsIgnoreCase("A")) {
-                while (true) {
-                    System.out.println("Triangle menu\n" +
-                            "1) Right sided triangle\n" +
-                            "2) Isosceles triangle\n" +
-                            "Q) Back to main menu");
+            if (response.equalsIgnoreCase("1")) {
+                do {
+                    System.out.println("""
+                            Triangle menu
+                            1) Right sided triangle
+                            2) Isosceles triangle
+                            Q) Back to main menu""");
                     response = s.nextLine();
                     System.out.println();
 
@@ -94,13 +96,9 @@ public class Question_03_Answer {
                         }
                     }
 
-                    if (response.equalsIgnoreCase("Q")) {
-                        break;
-                    }
-
-                }
+                } while (!response.equalsIgnoreCase("Q"));
             }
-            if (response.equalsIgnoreCase("B"))
+            if (response.equalsIgnoreCase("2"))
             {
                 System.out.println("Enter the height of the rectangle.");
                 if (s.hasNextInt())
